@@ -1,0 +1,1 @@
+- [Количество return в методе ](../../commons/cr07_number_of_return.md)
