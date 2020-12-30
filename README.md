@@ -25,7 +25,7 @@
 
 ## Git
 - [GR01: Первый коммит к задаче](git/gr01_task-first-commit.md)
-- [GR01: Некорректно привязанные коммиты](git/gr02_incorrect-linked-commits.md)
+- [GR02: Некорректно привязанные коммиты](git/gr02_incorrect-linked-commits.md)
 
 ## Jira
 - [JIRAR01: Комментарий по завершении задачи](jira/jirar01_task-comment.md)
