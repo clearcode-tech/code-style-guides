@@ -16,7 +16,7 @@
 - TODO
 
 ## Typescript
-- TODO
+- [TR01: Trailing commas](frontend/typescript/tr01_trailing-comma.md)
 
 ## Angular
 - [AR01: Action'ы в Angular проекте](frontend/angular/ar01-actions.md)
