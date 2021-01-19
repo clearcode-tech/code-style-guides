@@ -1,38 +1,38 @@
 ## Typescript Rule: Trailing commas
 
-Trailing commas("последние запятые") используются для последнего элемента в многострочном перечислении.
+Trailing commas("висящие/замыкающие/завершающие/последние запятые") используются для последнего элемента в многострочном перечислении.
 1. Перечисление элементов массива.
     ```
     const array: number[] = [
-    1,
-    2,
-    3,
+        1,
+        2,
+        3,
     ];
     ```
 2. Перечисление полей при создании объекта.
     ```
     const object: PersonWithName = {
-      name: "qwerty",
-      version: 1,
+        name: "qwerty",
+        version: 1,
     };
     ```
 3. Параметры методов.
    ```
    someMethod(
-    firstArgument,
-    secondArgument,
-    thirdArgument,  
+        firstArgument,
+        secondArgument,
+        thirdArgument,  
    ): void { }
    ```
 4. Аргументы, передаваемые в метод.
     ```
     someMethod2(): void {
     
-       this.someMethod(
-        firstArgument,
-        secondArgument,
-        thirdArgument,  
-       );
+        this.someMethod(
+            firstArgument,
+            secondArgument,
+            thirdArgument,  
+        );
     }
     ```
 Использовать такие запятые не нужно, если перечисление происходит в одну строку:
