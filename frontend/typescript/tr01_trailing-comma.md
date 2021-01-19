@@ -18,16 +18,20 @@ Trailing commas("висящие/замыкающие/завершающие/по
     ```
 3. Параметры методов.
    ```
-   someMethod(
-        firstArgument,
-        secondArgument,
-        thirdArgument,  
-   ): void { }
+    someMethod(
+        firstArgument: ArgumentType,
+        secondArgument: ArgumentType,
+        thirdArgument: ArgumentType,  
+    ): void { }
    ```
 4. Аргументы, передаваемые в метод.
     ```
     someMethod2(): void {
     
+       firstArgument: ArgumentType = this.calculateFirstArgument();
+       secondArgument: ArgumentType = this.calculateSecondArgument();
+       thirdArgument: ArgumentType = this.calculateThirdAgrument();
+
         this.someMethod(
             firstArgument,
             secondArgument,
@@ -37,8 +41,8 @@ Trailing commas("висящие/замыкающие/завершающие/по
     ```
 Использовать такие запятые не нужно, если перечисление происходит в одну строку:
 ```
-const array = [ 1, 2, 3 ];
-const object = { name: "qwerty", version: 1 };
+const array: number[] = [ 1, 2, 3 ];
+const object: PersonData = { name: "qwerty", version: 1 };
 ```
    
 #### Для чего нужны trailing commas: 
@@ -47,7 +51,7 @@ const object = { name: "qwerty", version: 1 };
 - Удобнее менять порядок элементов перечисления (вырезать строку и вставить из любой позиции в любую).   
 
 #### Настройки для TSLint: 
-Для TSLint правила для trailing commas отсутствуют по умолчанию. Для задания правил достаточно добавить правило в файл настроек TSLint: 
+Для автоматической проверки соблюдения правил trailing commas необходимо добавить настройку в tslint.json:
 ```
-"trailing-comma": [true, {"multiline": "always", "singleline": "never"}]
+"trailing-comma": [ true, { "multiline": "always", "singleline": "never" } ]
 ```
