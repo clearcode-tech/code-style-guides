@@ -65,9 +65,9 @@
     public String someMethod(String another) {
       
         String some2 = this.asdAsadasdasdAsdasdasdas(some1)
-          .filter(...)
-          .findAny()
-          .orElseThrow();
+            .filter(...)
+            .findAny()
+            .orElseThrow();
         
         return another + some2;
     }
