@@ -51,7 +51,7 @@ const object: PersonData = { name: "qwerty", version: 1 };
 - Удобнее менять порядок элементов перечисления (вырезать строку и вставить из любой позиции в любую).   
 
 #### Настройки для TSLint: 
-Для автоматической проверки соблюдения правил trailing commas необходимо добавить настройку в tslint.json:
+Для автоматической проверки соблюдения правила trailing commas необходимо добавить настройку в `tslint.json`:
 ```
 "trailing-comma": [ true, { "multiline": "always", "singleline": "never" } ]
 ```
