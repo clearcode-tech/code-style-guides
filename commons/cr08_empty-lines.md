@@ -80,8 +80,8 @@
      */
     public String someMethod(String another) {
           
-        String some1 = "asdAsadasdasdAsdasdasdas";
-        int some2 = 3426482354763425763466876;
+        String some1 = ...;
+        String some2 = ...;
        
         return some1 + some2;
     }
