@@ -7,7 +7,7 @@
      *
      * @return ...
      */
-    public String SomeMethod(another) {
+    public String someMethod(String another) {
         ...
    
         var person1 = this.call(...);
@@ -30,7 +30,7 @@
      *
      * @return ...
      */
-    public String SomeMethod(another) {
+    public String someMethod(String another) {
         
         this.call();
         ...
@@ -43,7 +43,7 @@
      *
      * @return ...
      */
-    public void SomeMethod(another) {
+    public void someMethod(String another) {
    
         if (condition1) {
    
@@ -62,7 +62,7 @@
      *
      * @return ...
      */
-    public String SomeMethod(another) {
+    public String someMethod(String another) {
       
         String some2 = this.asdAsadasdasdAsdasdasdas(some1)
           .filter(...)
@@ -78,12 +78,12 @@
      *
      * @return ...
      */
-    public String SomeMethod(another) {
+    public String someMethod(String another) {
           
         String some1 = "asdAsadasdasdAsdasdasdas";
         int some2 = 3426482354763425763466876;
        
-       return some1 + somt2;
+        return some1 + some2;
     }
     ```
    Исключение: в методе есть одно однострочное объявление переменной, которая в следующей строке 
@@ -94,9 +94,9 @@
      *
      * @return ...
      */
-    public String SomeMethod(another) {
+    public String someMethod(String another) {
         
-        LongClassName some = this.service.callLongName(another);
+        String some = this.service.doSomething(another);
         return another + some;
     }
     ```
