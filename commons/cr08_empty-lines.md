@@ -36,6 +36,24 @@
         ...
    }
 3. Перед блоком кода в if/else всегда ставится пустая строка.
+    ```
+   /**
+    * ...
+    *
+    * @return ...
+    */
+    public void SomeMethod(another) {
+   
+       if (condition1) {
+   
+         doSomething1();
+       }
+       else (condition2) {
+   
+         doSomething2();
+       }
+    }
+    ```
 4. Перед return всегда добавляется пустая строка.
     ```
     /**
