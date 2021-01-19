@@ -17,21 +17,21 @@ Trailing commas("висящие/замыкающие/завершающие/по
     };
     ```
 3. Параметры методов.
-   ```
+    ```
     someMethod(
         firstArgument: ArgumentType,
         secondArgument: ArgumentType,
         thirdArgument: ArgumentType,  
     ): void { }
-   ```
+    ```
 4. Аргументы, передаваемые в метод.
     ```
     someMethod2(): void {
     
-       firstArgument: ArgumentType = this.calculateFirstArgument();
-       secondArgument: ArgumentType = this.calculateSecondArgument();
-       thirdArgument: ArgumentType = this.calculateThirdAgrument();
-
+        const firstArgument: ArgumentType = this.calculateFirstArgument();
+        const secondArgument: ArgumentType = this.calculateSecondArgument();
+        const thirdArgument: ArgumentType = this.calculateThirdAgrument();
+        
         this.someMethod(
             firstArgument,
             secondArgument,
