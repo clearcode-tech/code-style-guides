@@ -1,25 +1,41 @@
 ## Common Rule: Оформление регионов
 
-
-
 1. Всегда использовать регионы для разграничения логики в классе.
-2. Регионы могут быть вложены друг в друга. Так, например, регион Migrations вложен в Public в примере ниже.
-3. Вложенные регионы обособляются пустой строкой от внешнего.
-4. Между регионами пустой строки нет.
+2. Состав и порядок основных регионов определён ниже.
+3. Между основными регионами пустой строки нет.
+4. Для legacy-кода внутри основных регионов могут встречаться вложенные регионы. Так, например, регион `Migrations` вложен в регион `Public` в примере ниже.
+5. Вложенные регионы обособляются пустой строкой от внешнего сверху и/или снизу. Между идущими подряд вложенными регионами пустой строки нет.
+6. Вложенные регионы допустимы только для legacy-кода. В новом коде вложенные регионы не должны встречаться.
 
-Последовательность регионов:
+Состав и порядок основных регионов для Java:
 
-- Constants - константы класса
-- Inputs - входящие данные “тупого” Angular компонента
-- Outputs - исходящие данные “тупого” Angular компонента
-- Fields - поля класса. При большом их количестве можно разбить на Public Fields и Private Fields
-- Ctor - конструкторы класса
-- Static factories - статические методы фабрики
-- Hooks - методы Angular компонента, представляющие его этапы жизненного цикла
-- Getters and Setters - get и set методы TypeScript'а
-- Public - публичные методы
-- Events - обработчики событий
-- Private - приватные методы
+- `Constants` - Константы класса. При большом количестве констант регион можно разбить на `Public constants`, `Protected constants` и `Private constants`.
+- `Fields` - Поля класса. При большом количестве полей регион можно разбить на `Public fields`, `Protected field` и `Private fields`.
+- `Ctor` - Конструкторы класса.
+- `Static factories` - Статические фабричные методы.
+- `Public static` - Публичные статические методы класса.
+- `Public` - Публичные методы экземпляра класса.
+- `Protected static` - Защищённые статические методы класса.
+- `Protected` - Защищённые методы экземпляра класса.
+- `Private static` - Приватные статические методы класса.
+- `Private` - Приватные методы экземпляра класса.
+
+Состав и порядок основных регионов для TypeScript:
+
+- `Constants` - Константы класса. При большом количестве констант регион можно разбить на `Public constants`, `Protected constants` и `Private constants`.
+- `Inputs` - Входящие данные "тупого" Angular компонента.
+- `Outputs` - Исходящие события "тупого" Angular компонента.
+- `Fields` - Поля класса. При большом количестве полей регион можно разбить на `Public fields`, `Protected field` и `Private fields`.
+- `Ctor` - Конструкторы класса.
+- `Hooks` - Методы Angular-компонента, представляющие его этапы жизненного цикла.
+- `Getters and Setters` - `get` и `set` методы TypeScript'а.
+- `Public static` - Публичные статические методы класса.
+- `Public` - Публичные методы экземпляра класса.
+- `Events` - Обработчики событий.
+- `Protected static` - Защищённые статические методы класса.
+- `Protected` - Защищённые методы экземпляра класса.
+- `Private static` - Приватные статические методы класса.
+- `Private` - Приватные методы экземпляра класса.
 
 Пример для Java:
 
@@ -31,18 +47,39 @@ public final class ClassName {
     //region Constants
 
     /**
-    * <p>...</p>
-    */
+     * <p>...</p>
+     */
     private static final String STRING_CONSTANT = "string constant value";
 
+    //endregion
+    //region Fields
+    
+    /**
+     * <p>...</p>
+     */
+    private final SomeService someService;
+    
+    /**
+     * <p>...</p>
+     */
+    private final HttpClient httpClient;
+    
     //endregion
     //region Ctor
 
     /**
-    * <p>Конструктор класса ...</p>
-    */
+     * <p>Конструктор класса ...</p>
+     *
+     * @param someService ...
+     */
     @Inject
-    public ClassName() { }
+    public ClassName(SomeService someService) {
+
+        this.someService = someService;
+        this.httpClient = HttpClient.newBuilder()
+            .version(HttpClient.Version.HTTP_1_1)
+            .build();
+    }
 
     //endregion
     //region Public
@@ -50,16 +87,18 @@ public final class ClassName {
     //region Migrations
 
     /**
-    * <p>Возвращает ...</p>
-    */ 
+     * <p>Возвращает ...</p>
+     *
+     * @return ...
+     */ 
     public List<String> getMigrationLocations() {
 
-    	return ...;
+        return ...;
     }
 
     //endregion
 
-	//endregion
+    //endregion
 }
 ```
 
