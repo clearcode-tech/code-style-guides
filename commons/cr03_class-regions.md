@@ -46,18 +46,39 @@ public final class ClassName {
     //region Constants
 
     /**
-    * <p>...</p>
-    */
+     * <p>...</p>
+     */
     private static final String STRING_CONSTANT = "string constant value";
 
+    //endregion
+    //region Fields
+    
+    /**
+     * <p>...</p>
+     */
+    private final SomeService someService;
+    
+    /**
+     * <p>...</p>
+     */
+    private final HttpClient httpClient;
+    
     //endregion
     //region Ctor
 
     /**
-    * <p>Конструктор класса ...</p>
-    */
+     * <p>Конструктор класса ...</p>
+     *
+     * @param someService ...
+     */
     @Inject
-    public ClassName() { }
+    public ClassName(SomeService someService) {
+
+        this.someService = someService;
+        this.httpClient = HttpClient.newBuilder()
+            .version(HttpClient.Version.HTTP_1_1)
+            .build();
+    }
 
     //endregion
     //region Public
