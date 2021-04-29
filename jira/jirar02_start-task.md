@@ -2,6 +2,7 @@
 
 1. Перевести задачу в `In Progress`. Поле `Developer` должно автоматически заполниться, там будете вы.
 2. Создать ветку, выполнив клик по `Development` → `Create branch`.
+
    ![branch_creation](../images/jira/02/create-branch.png)
    
    Откроется страница создания ветки в `Bitbucket`, на ней необходимо сделать следующее:
