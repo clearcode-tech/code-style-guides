@@ -18,3 +18,12 @@ EN-XXX Версия задачи
 
 `EN-XXX` - номер задачи. Префикс зависит от проекта. Указано в Jira.
 
+### Примеры версий
+- Play проект: 
+  - в `build.sbt` изменить `version := "2.5.1"` на `version := "2.5.1.HRL-270"`
+  - в `conf/version` изменить `2.5.1` на `2.5.1.HRL-270`
+- Maven проект:
+  - в `pom.xml` изменить `<version>2.5.1</version>` на `<version>2.5.1.HRL-270-SNAPSHOT</version>`
+- Angular проект:
+  - в `version.ts` изменить `export const version = "2.7.0"` на `export const version = "2.7.0.HRL-270"`
+
