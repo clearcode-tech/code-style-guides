@@ -8,6 +8,7 @@
 5. Other
 
 Источник: http://smacss.com/book/formatting#grouping
+
 Полный порядок свойств: https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.1.3/index.js
 
 Для поддержки этого правила в проекте должен быть настроен линтер, который подскажет, если порядок был нарушен.
