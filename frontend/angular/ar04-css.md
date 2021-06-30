@@ -7,13 +7,13 @@
 4. Text
 5. Other
 
-Источник: http://smacss.com/book/formatting
+Источник: http://smacss.com/book/formatting#grouping
 
 Полный порядок свойств: https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.1.3/index.js
 
+Для поддержки этого правила в проекте должен быть настроен линтер, который подскажет, если порядок был нарушен.
 
-### Stylelint
-Это линтер для CSS и SCSS. Чтобы его использовать для подсказок о порядке свойств CSS, надо:
+### Настройка Stylelint в UI-проекте
 
 1. Установить stylelint:
 ```
@@ -31,7 +31,7 @@ npm install --save-dev stylelint-order
 ```
 npm install --save-dev stylelint-config-property-sort-order-smacss
 ```
-5. Перенести файл конфигурации из `<project>/node_modules/stylelint-config-recommended/index.js` в `<project>/stylelint_config.js`
+5. Перенести файл конфигурации из `<project>/node_modules/stylelint-config-recommended/index.js` в `<project>/stylelint_config.js`. После этого пакет `stylelint-config-standard` можно удалять.
 
 6. Добавить в файл конфигурации перед нодой 'rules':
 ```
