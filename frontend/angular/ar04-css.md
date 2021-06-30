@@ -1,6 +1,6 @@
 ## Angular Rule 04: Порядок свойств CSS
 
-Для определения порядка свойств мы пользуемся рекомендациями SMACSS (Scalable and Modular Architecture for CSS), который устанавливает такой порядок для категорий:
+Для определения порядка свойств мы пользуемся рекомендациями SMACSS (Scalable and Modular Architecture for CSS), которые устанавливают порядок категорий:
 1. Box
 2. Border
 3. Background
@@ -8,7 +8,6 @@
 5. Other
 
 Источник: http://smacss.com/book/formatting#grouping
-
 Полный порядок свойств: https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.1.3/index.js
 
 Для поддержки этого правила в проекте должен быть настроен линтер, который подскажет, если порядок был нарушен.
@@ -40,7 +39,7 @@ npm install --save-dev stylelint-config-property-sort-order-smacss
 	],
 	'extends': 'stylelint-config-property-sort-order-smacss',
 ```
-6. В IDEA открыть настройки: File | Settings | Languages & Frameworks | Style Sheets | Stylelint
+7. В IDEA открыть настройки: File | Settings | Languages & Frameworks | Style Sheets | Stylelint
 
     - Поставить галочку (enable)
 
