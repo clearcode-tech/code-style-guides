@@ -24,6 +24,7 @@
 - [AR01: Action'ы в Angular проекте](frontend/angular/ar01-actions.md)
 - [AR02: Selector'ы в Angular проекте](frontend/angular/ar02-selectors.md)
 - [AR03: Импорты в Angular](frontend/angular/ar03-imports.md)
+- [AR04: Порядок свойств CSS](frontend/angular/ar04_css-properties-order.md)
 
 ## Git
 - [GR01: Первый коммит к задаче](git/gr01_task-first-commit.md)
