@@ -1,4 +1,4 @@
-## Angular Rule 04: Порядок свойств CSS
+## Angular Rule 4: Порядок свойств CSS
 
 Для определения порядка свойств мы пользуемся рекомендациями SMACSS (Scalable and Modular Architecture for CSS), которые устанавливают порядок категорий:
 1. Box
