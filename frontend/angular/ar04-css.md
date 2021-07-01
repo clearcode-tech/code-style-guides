@@ -16,30 +16,30 @@
 ### Настройка Stylelint в UI-проекте
 
 1. Установить stylelint:
-```
-npm install --save-dev stylelint
-```
+    ```
+    npm install --save-dev stylelint
+    ```
 2. Установить конфигурацию, либо можно использовать готовый файл:
-```
-npm install --save-dev stylelint-config-standard
-```
+    ```
+    npm install --save-dev stylelint-config-standard
+    ```
 3. Установить stylelint-order:
-```
-npm install --save-dev stylelint-order
-```
+    ```
+    npm install --save-dev stylelint-order
+    ```
 4. Установить stylelint-config-property-sort-order-smacss:
-```
-npm install --save-dev stylelint-config-property-sort-order-smacss
-```
+    ```
+    npm install --save-dev stylelint-config-property-sort-order-smacss
+    ```
 5. Перенести файл конфигурации из `<project>/node_modules/stylelint-config-recommended/index.js` в `<project>/stylelint_config.js`. После этого пакет `stylelint-config-standard` можно удалять.
 
 6. Добавить в файл конфигурации перед нодой 'rules':
-```
-	'plugins': [
-		'stylelint-order'
-	],
-	'extends': 'stylelint-config-property-sort-order-smacss',
-```
+    ```
+    'plugins': [
+        'stylelint-order'
+    ],
+    'extends': 'stylelint-config-property-sort-order-smacss',
+    ```
 7. В IDEA открыть настройки: File | Settings | Languages & Frameworks | Style Sheets | Stylelint
 
     - Поставить галочку (enable)
