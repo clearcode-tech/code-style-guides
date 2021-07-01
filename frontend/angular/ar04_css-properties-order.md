@@ -15,32 +15,54 @@
 
 ### Настройка Stylelint в UI-проекте
 
-1. Установить stylelint:
+1. Установить `stylelint`:
     ```
     npm install --save-dev stylelint
     ```
-2. Установить конфигурацию, либо можно использовать готовый файл:
     ```
-    npm install --save-dev stylelint-config-standard
+    yarn add stylelint --dev
     ```
-3. Установить stylelint-order:
+2. Установить `stylelint-order`:
     ```
     npm install --save-dev stylelint-order
     ```
-4. Установить stylelint-config-property-sort-order-smacss:
+    ```
+    yarn add stylelint-order --dev
+    ```
+3. Установить `stylelint-config-property-sort-order-smacss`:
     ```
     npm install --save-dev stylelint-config-property-sort-order-smacss
     ```
-5. Перенести файл конфигурации из `<project>/node_modules/stylelint-config-recommended/index.js` в `<project>/stylelint_config.js`. После этого пакет `stylelint-config-standard` можно удалять.
-
-6. Добавить в файл конфигурации перед нодой 'rules':
     ```
-    'plugins': [
-        'stylelint-order'
-    ],
-    'extends': 'stylelint-config-property-sort-order-smacss',
+    yarn add stylelint-config-property-sort-order-smacss --dev
     ```
-7. В IDEA открыть настройки: File | Settings | Languages & Frameworks | Style Sheets | Stylelint
+4. Для получения начального файла конфигурации установить `stylelint-config-standard`:
+    ```
+    npm install --save-dev stylelint-config-standard
+    ```
+    ```
+    yarn add stylelint-config-standard --dev
+    ```
+    Перенести файл конфигурации из `<project>/node_modules/stylelint-config-recommended/index.js` в `<project>/stylelint.config.js`. После этого `stylelint-config-standard` можно удалить:
+    ```
+    npm uninstall stylelint-config-standard
+    ```
+    ```
+    yarn remove stylelint-config-standard
+    ```
+5. В файл конфигурации `stylelint.config.js` перед массивом `rules` добавить настройки:
+    ```
+    module.exports = {
+        "plugins": [
+            "stylelint-order"
+         ],
+        "extends": 'stylelint-config-property-sort-order-smacss',
+        "rules": [
+            ... Rules go here ...
+        ]
+    }
+    ```
+6. В IDEA открыть настройки: File | Settings | Languages & Frameworks | Style Sheets | Stylelint
 
     - Поставить галочку (enable)
 
@@ -48,4 +70,4 @@
     `<project>/node_modules/stylelint`
 
     - Configuration file:
-    `<project>/stylelint_config.js`
+    `<project>/stylelint.config.js`
